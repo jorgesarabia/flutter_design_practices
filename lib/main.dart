@@ -84,34 +84,44 @@ class __HomePageState extends State<_HomePage> {
                         child: Transform(
                           alignment: Alignment.center,
                           transform: Matrix4.identity()..scale(scale, 1.0),
-                          child: Card(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(20.0),
-                                topRight: Radius.circular(20.0),
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) {
+                                  return challenge.page;
+                                }),
+                              );
+                            },
+                            child: Card(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(20.0),
+                                  topRight: Radius.circular(20.0),
+                                ),
                               ),
-                            ),
-                            color: challenge.color,
-                            child: Column(
-                              children: [
-                                Text(
-                                  '${challenge.title} ${index + 1}',
-                                  style: TextStyle(
-                                    fontSize: 25.0,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
+                              color: challenge.color,
+                              child: Column(
+                                children: [
+                                  Text(
+                                    '${challenge.title} ${index + 1}',
+                                    style: TextStyle(
+                                      fontSize: 25.0,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
-                                ),
-                                Text(
-                                  challenge.detail,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                    fontSize: 15.0,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w500,
+                                  Text(
+                                    challenge.detail,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      fontSize: 15.0,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w500,
+                                    ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
                         ),
