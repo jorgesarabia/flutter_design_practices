@@ -75,11 +75,6 @@ class __HomePageState extends State<_HomePage> {
                   if (opacity < 0.0) opacity = 0.0;
                   if (scale > 1.0) scale = 1.0;
 
-                  if (index == 1) {
-                    print(_scrollController.offset);
-                    // print(opacity);
-                  }
-
                   return Align(
                     heightFactor: 0.5,
                     child: SizedBox(
