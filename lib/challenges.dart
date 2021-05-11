@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_design_practices/constants.dart';
+import 'package:flutter_design_practices/dbrand_skin/dbrand_skin_selection.dart';
 import 'package:flutter_design_practices/vinyl_album/vinyl_album.dart';
 
 class Challenge {
@@ -26,6 +27,13 @@ List<Challenge> get challengeList {
       detail: lorem,
       url: 'https://www.google.com',
       page: VinylAlbum(),
+    ),
+    Challenge(
+      color: Colors.red,
+      title: 'Desafio ',
+      detail: lorem,
+      url: 'https://dbrand.com/shop/special-edition/pastels',
+      page: DBrandSkinSelection(),
     ),
   ];
 }
