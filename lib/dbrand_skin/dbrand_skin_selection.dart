@@ -127,6 +127,8 @@ class _SkinClipper extends CustomClipper<Path> {
     final path = Path();
 
     double width;
+    double height;
+
     if (skin.center.x == -1) {
       width = 0.0;
     } else if (skin.center.x == 0) {
@@ -134,7 +136,7 @@ class _SkinClipper extends CustomClipper<Path> {
     } else {
       width = size.width;
     }
-    double height;
+
     if (skin.center.y == -1) {
       height = 0.0;
     } else if (skin.center.y == 0) {
