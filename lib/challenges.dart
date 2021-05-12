@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_design_practices/animated_btn_scroll/animated_btn_scroll.dart';
 import 'package:flutter_design_practices/constants.dart';
 import 'package:flutter_design_practices/dbrand_skin/dbrand_skin_selection.dart';
 import 'package:flutter_design_practices/vinyl_album/vinyl_album.dart';
@@ -34,6 +35,13 @@ List<Challenge> get challengeList {
       detail: lorem,
       url: 'https://dbrand.com/shop/special-edition/pastels',
       page: DBrandSkinSelection(),
+    ),
+    Challenge(
+      color: Colors.green,
+      title: 'Desafio ',
+      detail: lorem,
+      url: '',
+      page: AnimatedBtnScroll(),
     ),
   ];
 }
