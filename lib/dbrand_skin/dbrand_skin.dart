@@ -8,10 +8,10 @@ class DBrandSkin {
     this.center,
   });
 
-  final String name;
-  final String image;
-  final int color;
-  final Alignment center;
+  final String? name;
+  final String? image;
+  final int? color;
+  final Alignment? center;
 }
 
 final skins = <DBrandSkin>[

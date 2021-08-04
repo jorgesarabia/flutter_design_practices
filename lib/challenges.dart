@@ -6,11 +6,11 @@ import 'package:flutter_design_practices/vinyl_album/vinyl_album.dart';
 
 class Challenge {
   const Challenge({
-    @required this.color,
-    @required this.title,
-    @required this.detail,
-    @required this.url,
-    @required this.page,
+    required this.color,
+    required this.title,
+    required this.detail,
+    required this.url,
+    required this.page,
   });
 
   final String title;

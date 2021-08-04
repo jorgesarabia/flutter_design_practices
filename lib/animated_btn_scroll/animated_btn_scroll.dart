@@ -135,7 +135,7 @@ class _FabButton extends StatelessWidget {
 class _Item extends StatelessWidget {
   const _Item({this.color});
 
-  final Color color;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {

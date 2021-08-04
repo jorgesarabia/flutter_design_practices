@@ -34,7 +34,7 @@ class _MyVinylAlbumHeader extends SliverPersistentHeaderDelegate {
     // El shrinkOffset va desde 0 hasta maxExtent;
     final percent = shrinkOffset / maxExtent;
 
-    final currentImageSize = (160.0 * (1 - percent)).clamp(60.0, 160.0);
+    final num currentImageSize = (160.0 * (1 - percent)).clamp(60.0, 160.0);
     final minMargin = size.width / 4;
     final leftMaxMargin = minMargin + (minMargin / 2 * percent);
 
@@ -70,7 +70,7 @@ class _MyVinylAlbumHeader extends SliverPersistentHeaderDelegate {
           Positioned(
             bottom: 10.0,
             left: (150.0 * (1 - percent)).clamp(35.0, 150.0),
-            height: currentImageSize,
+            height: currentImageSize as double?,
             child: Transform.rotate(
               angle: 2 * pi * percent,
               child: Image.asset('assets/vinyl_album/vinyl.png'),
@@ -79,7 +79,7 @@ class _MyVinylAlbumHeader extends SliverPersistentHeaderDelegate {
           Positioned(
             bottom: 10.0,
             left: 35.0,
-            height: currentImageSize,
+            height: currentImageSize as double?,
             child: Image.asset('assets/vinyl_album/album.jpg'),
           ),
         ],

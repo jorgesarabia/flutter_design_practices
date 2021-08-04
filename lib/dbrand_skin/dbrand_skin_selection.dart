@@ -10,7 +10,7 @@ class _DBrandSkinSelectionState extends State<DBrandSkinSelection>
     with SingleTickerProviderStateMixin {
   DBrandSkin _current = skins.first;
   DBrandSkin _past = skins.first;
-  AnimationController _controller;
+  late AnimationController _controller;
 
   @override
   void initState() {
@@ -50,7 +50,7 @@ class _DBrandSkinSelectionState extends State<DBrandSkinSelection>
               children: [
                 Positioned.fill(
                   child: Image.asset(
-                    _past.image,
+                    _past.image!,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -64,7 +64,7 @@ class _DBrandSkinSelectionState extends State<DBrandSkinSelection>
                           _current,
                         ),
                         child: Image.asset(
-                          _current.image,
+                          _current.image!,
                           fit: BoxFit.cover,
                         ),
                       );
@@ -78,7 +78,7 @@ class _DBrandSkinSelectionState extends State<DBrandSkinSelection>
             child: Column(
               children: [
                 Text(
-                  _current.name,
+                  _current.name!,
                   style: TextStyle(
                     fontSize: 35.0,
                     fontWeight: FontWeight.bold,
@@ -129,17 +129,17 @@ class _SkinClipper extends CustomClipper<Path> {
     double width;
     double height;
 
-    if (skin.center.x == -1) {
+    if (skin.center!.x == -1) {
       width = 0.0;
-    } else if (skin.center.x == 0) {
+    } else if (skin.center!.x == 0) {
       width = size.width / 2;
     } else {
       width = size.width;
     }
 
-    if (skin.center.y == -1) {
+    if (skin.center!.y == -1) {
       height = 0.0;
-    } else if (skin.center.y == 0) {
+    } else if (skin.center!.y == 0) {
       height = size.height / 2;
     } else {
       height = size.height;
@@ -164,9 +164,9 @@ class _SkinClipper extends CustomClipper<Path> {
 
 class _SkinButton extends StatelessWidget {
   _SkinButton({
-    @required this.skin,
-    @required this.onTap,
-    @required this.isSelected,
+    required this.skin,
+    required this.onTap,
+    required this.isSelected,
   });
 
   final DBrandSkin skin;
@@ -188,7 +188,7 @@ class _SkinButton extends StatelessWidget {
         ),
         child: DecoratedBox(
           decoration: BoxDecoration(
-            color: Color(skin.color),
+            color: Color(skin.color!),
             shape: BoxShape.circle,
           ),
         ),
