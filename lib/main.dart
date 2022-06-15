@@ -104,7 +104,7 @@ class __HomePageState extends State<_HomePage> {
                               child: Column(
                                 children: [
                                   Text(
-                                    '${challenge.title} ${index + 1}',
+                                    challenge.title,
                                     style: TextStyle(
                                       fontSize: 25.0,
                                       color: Colors.white,
